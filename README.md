@@ -1,24 +1,20 @@
-# README
+# Projet: Gmail-like en AJAX
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TPour ce projet, nous allons te demander de faire un Email Viewer qui n'est ni plus ni moins qu'une version ultra basique de Gmail. Globalement l'appli affichera une seule et unique page avec 2 colonnes :
 
-Things you may want to cover:
+Une colonne contenant la liste des emails en base ;
+Une colonne affichant le contenu de l'email sur lequel l'utilisateur vient de cliquer.
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+  
+  - download zip or clone repo
+  - $ bundle install
+  - rails db:create
+  - rails db:migrate
+  - rails db:seed (optional)
+  - rails server
+  - got to localhost:3000 in your browser to test the mailer
 
-* ...
+
