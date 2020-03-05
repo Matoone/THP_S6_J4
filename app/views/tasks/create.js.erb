@@ -1,0 +1,2 @@
+document.getElementById("<%=@category.title.downcase.gsub(" ", "-")%>").children[0].insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>")
+console.log("<%=@category.title.downcase.gsub(" ", "-")%>")

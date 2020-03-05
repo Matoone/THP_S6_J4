@@ -1,0 +1,15 @@
+  <% if task.status == true %>
+ <li class="container row status-true" id="task-id-<%=task.id%>">
+ <% else %>
+ <li class="container row" id="task-id-<%=task.id%>">
+  <% end %>
+        <%= task.title  %>
+        <% unless task.deadline.nil? %>
+          , to read: <%= task.deadline.strftime('%D')  %>
+        <% end %>
+          <%= button_to task_path(:id => task.id), method:"delete", :class => "ml-2", :remote => true do%>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+         <%= check_box_tag "status", 1, task.status , data: { remote: true, url: task_path(task.id), params: { id: task.id, status: !task.status}.to_param, method: "put" }%>
+      </li>
+     
