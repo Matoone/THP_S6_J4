@@ -8,13 +8,13 @@
     
     <div class="row">
       <div id="objects-container" class="container column col-2 p-5 border">
-      <h3 class="text-center mb-5 bg-secondary text-white">OBJECT</h3>
+      <h3 class="text-center mb-5 bg-secondary text-white p-4">OBJECT</h3>
       <% @emails.each do |email|%>
-        <div id="email-object-<%=email.id%>"><%=email.object%></div>
+        <%= render 'email_object', email: email %>
       <% end %>
       </div>
       <div id="bodies-container" class="container column d-flex flex-column col-10 p-5 border">
-      <h3 class="text-center mb-5 bg-secondary text-white">BODY</h3>
+      <h3 class="text-center mb-5 bg-secondary text-white p-4">BODY</h3>
        
       </div>
     </div>

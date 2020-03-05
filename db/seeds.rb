@@ -20,7 +20,7 @@ Email.destroy_all
     my_task.save
   end
   5.times do 
-    my_email = Email.create!(object: Faker::Company.buzzword, body: Faker::Lorem.paragraph(sentence_count: 8, supplemental: true, random_sentences_to_add: 4))
+    my_email = Email.create!(object: Faker::Company.buzzword, body: Faker::Lorem.paragraph(sentence_count: 8, supplemental: true, random_sentences_to_add: 4), read: false)
   end
   
 end

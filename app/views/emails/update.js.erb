@@ -1,0 +1,8 @@
+document.getElementById("email-object-<%=@email.id%>").classList.toggle("font-weight-bold")
+
+if(document.getElementById("email-body-<%=@email.id%>").children[3].children[1].value === "MARQUER COMME LU") {
+  document.getElementById("email-body-<%=@email.id%>").children[3].children[1].value = "MARQUER COMME NON LU"
+}
+else {
+  document.getElementById("email-body-<%=@email.id%>").children[3].children[1].value = "MARQUER COMME LU"
+}
