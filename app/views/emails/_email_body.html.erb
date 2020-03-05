@@ -1,0 +1,6 @@
+
+<div id="email-body-<%=email.id%>">
+  <h3><%=email.object%></h3>
+  <%=email.body%>
+  <%= button_to "SUPPRIMER", email_path(email.id), method: "delete",  :class => "btn btn-danger", :remote => true %>  
+</div>

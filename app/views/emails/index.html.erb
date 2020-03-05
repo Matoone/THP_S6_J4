@@ -1,0 +1,21 @@
+<h1 class="text-center mb-5">Bienvenue sur l'application d'emails</h1>
+  <div id="buttons-container" class="d-flex flex-around ">
+    <%= button_to "CREATE", emails_path, action: "create", remote: true, :class => "btn btn-danger" %>  
+      
+      <button class="btn btn-danger">DELETE</button>
+    </div>
+  <div class="container-fluid d-flex flex-row">
+    
+    <div class="row">
+      <div id="objects-container" class="container column col-2 p-5 border">
+      <h3 class="text-center mb-5 bg-secondary text-white">OBJECT</h3>
+      <% @emails.each do |email|%>
+        <div id="email-object-<%=email.id%>"><%=email.object%></div>
+      <% end %>
+      </div>
+      <div id="bodies-container" class="container column d-flex flex-column col-10 p-5 border">
+      <h3 class="text-center mb-5 bg-secondary text-white">BODY</h3>
+       
+      </div>
+    </div>
+</div>

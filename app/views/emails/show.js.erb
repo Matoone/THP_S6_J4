@@ -1,0 +1,8 @@
+<%# if(!bodiesContainer) {
+  const bodiesContainer = document.getElementById("bodies-container")
+} %>
+
+document.getElementById("bodies-container").innerHTML = ""
+
+document.getElementById("bodies-container").insertAdjacentHTML("beforeend", "<%= j render 'email_body', email: @email %>")
+
