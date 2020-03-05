@@ -2,7 +2,7 @@
   <div id="buttons-container" class="d-flex flex-around ">
     <%= button_to "CREATE", emails_path, action: "create", remote: true, :class => "btn btn-danger" %>  
       
-      <button class="btn btn-danger">DELETE</button>
+      
     </div>
   <div class="container-fluid d-flex flex-row">
     
@@ -19,3 +19,24 @@
       </div>
     </div>
 </div>
+<% @emails.each do |email| %>
+ <script>
+
+    $(document).ready(function(){
+      $('#email-object-<%=email.id%>').click(function(){
+        $.ajax({
+    url: "<%=email_path(email.id)%>",
+    type:"GET",
+    dataType: "script",
+    success: function(result) {
+      console.log(result)
+      eval(result)
+    },
+    error: function(error) {
+      console.log(`Error ${error}`)
+    }
+  })
+      })
+    })
+  </script>
+  <% end %>

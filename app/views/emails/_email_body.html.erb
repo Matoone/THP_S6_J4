@@ -1,5 +1,5 @@
 
-<div class="mt-2 mb-2 border p-2" id="email-body-<%=email.id%>">
+<div class="mt-2 mb-2 border p-5" id="email-body-<%=email.id%>">
   <h3><%=email.object%></h3>
   <p><%=email.body%></p>
   <%= button_to "SUPPRIMER", email_path(email.id), method: "delete",  :class => "btn btn-danger", :remote => true %>
