@@ -1,4 +1,4 @@
-<h1 class="text-center mb-5">Bienvenue sur l'application d'emails</h1>
+<h1 class="text-center mb-5">Gmail like</h1>
   <div id="buttons-container" class="d-flex flex-around ">
     <%= button_to "CREATE", emails_path, action: "create", remote: true, :class => "btn btn-danger mb-5 ml-5" %>  
       
@@ -13,9 +13,18 @@
         <%= render 'email_object', email: email %>
       <% end %>
       </div>
-      <div id="bodies-container" class="container column d-flex flex-column col-8 p-5 border bg-light">
-      <h3 class="text-center mb-5 bg-secondary text-white p-4">BODY</h3>
-       
+      <div  class="container column d-flex flex-column col-8 p-5 border bg-light align-items-center ">
+        <h3 class="text-center mb-5 bg-secondary text-white p-4 align-self-stretch">BODY</h3>
+        <div id="card-inside">
+          <div class="floating">
+          <div class="card-object rotate">
+            <header></header>
+            <aside></aside>
+            <main><blockquote id="bodies-container" class="message"></blockquote></main>
+            
+          </div>
+          </div>
+        </div> 
       </div>
     </div>
 </div>

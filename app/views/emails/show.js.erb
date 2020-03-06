@@ -3,7 +3,7 @@
 } %>
 
 document.getElementById("bodies-container").innerHTML = ""
-document.getElementById("bodies-container").insertAdjacentHTML("beforeend", '<h3 class="text-center mb-5 bg-secondary text-white p-4">BODY</h3>')
+
 
 document.getElementById("bodies-container").insertAdjacentHTML("beforeend", "<%= j render 'email_body', email: @email %>")
 document.getElementById("email-object-<%=@email.id%>").classList.remove("font-weight-bold")
