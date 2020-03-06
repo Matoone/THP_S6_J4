@@ -3,7 +3,7 @@ require 'faker'
 class EmailsController < ApplicationController
   def index
     @emails = Email.all
-    
+
   end
 
   def create
@@ -33,8 +33,9 @@ class EmailsController < ApplicationController
   def destroy
     @email = Email.find(params["id"])
     @email.destroy
+    flash[:danger] = "Vous avez supprimé cet email"
     respond_to do |format|
-      format.html {flash[:notice] = "Email deleted"
+      format.html {
       redirect_to root_path}
       format.js { }
     end
